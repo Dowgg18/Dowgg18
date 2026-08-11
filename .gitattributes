@@ -1,0 +1,5 @@
+# The only Python here generates the profile artwork. Keeping it out of the
+# language stats stops this repo from advertising itself as a Python project
+# next to three that actually are.
+scripts/*.py linguist-vendored
+assets/*.svg linguist-generated
