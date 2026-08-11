@@ -24,14 +24,11 @@ the way I wish I had found them. None of them are demos.
 
 <div align="center">
 
-<a href="https://github.com/Dowgg18/debounced-webhook-pipeline">
-  <img src="assets/burstq.svg" alt="burstq — one ordered unit of work per conversation" width="420" />
-</a>
 <a href="https://github.com/Dowgg18/agent-replay-gate">
-  <img src="assets/replaygate.svg" alt="replaygate — a pre-deploy regression gate for LLM agents" width="420" />
+  <img src="assets/replaygate.svg" alt="replaygate — a pre-deploy regression gate for LLM agents" width="440" />
 </a>
-<a href="https://github.com/Dowgg18/unhealthy-until-proven">
-  <img src="assets/proven.svg" alt="proven — a health check has three outcomes, not two" width="420" />
+<a href="https://github.com/Dowgg18/debounced-webhook-pipeline">
+  <img src="assets/burstq.svg" alt="burstq — one ordered unit of work per conversation" width="440" />
 </a>
 
 </div>
@@ -59,7 +56,8 @@ model.
 has three outcomes, not two. A dashboard I owned reported a channel as
 **Connected** for two months after it had died, because the status column was
 only ever written on the happy path, so it climbed to green and could never come
-back down.
+back down. `measured` / `stale` / `unknown`, and collapsing to a boolean requires
+naming what unknown means, at the call site, every time.
 
 <br/>
 

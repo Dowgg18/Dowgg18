@@ -1,22 +1,59 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="440" height="152" viewBox="0 0 440 152" role="img" aria-label="replaygate">
+<svg xmlns="http://www.w3.org/2000/svg" width="500" height="200"
+     viewBox="0 0 500 200" role="img" aria-label="replaygate">
   <defs>
-    <linearGradient id="edge" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#CDC733" stop-opacity="0.9"/>
-      <stop offset="100%" stop-color="#28332D" stop-opacity="0.5"/>
+    <linearGradient id="surface-replaygate" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#20201C"/>
+      <stop offset="100%" stop-color="#171713"/>
     </linearGradient>
+    <linearGradient id="spine-replaygate" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#CDC733"/>
+      <stop offset="70%" stop-color="#28332D"/>
+      <stop offset="100%" stop-color="#28332D" stop-opacity="0.3"/>
+    </linearGradient>
+    <!-- A light source at the top edge. One highlight does more for depth than
+         any drop shadow, and it survives both GitHub themes. -->
+    <linearGradient id="edge-replaygate" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#CDC733" stop-opacity="0"/>
+      <stop offset="28%" stop-color="#CDC733" stop-opacity="0.55"/>
+      <stop offset="100%" stop-color="#CDC733" stop-opacity="0"/>
+    </linearGradient>
+    <radialGradient id="glow-replaygate" cx="0.82" cy="0.12" r="0.6">
+      <stop offset="0%" stop-color="#CDC733" stop-opacity="0.10"/>
+      <stop offset="100%" stop-color="#CDC733" stop-opacity="0"/>
+    </radialGradient>
+    <clipPath id="clip-replaygate">
+      <rect x="1" y="1" width="498" height="198" rx="15"/>
+    </clipPath>
   </defs>
 
-  <rect x="0.5" y="0.5" width="439" height="151" rx="12"
-        fill="#21211D" stroke="#F9F9F9" stroke-opacity="0.10"/>
-  <rect x="0.5" y="0.5" width="4" height="151" rx="2" fill="url(#edge)"/>
+  <rect x="0.5" y="0.5" width="499" height="199" rx="15"
+        fill="url(#surface-replaygate)" stroke="#F9F9F9" stroke-opacity="0.09"/>
 
-  <text x="26" y="44" font-family="system-ui,-apple-system,'Segoe UI',Roboto,Helvetica,Arial,sans-serif" font-size="20" font-weight="700"
-        fill="#CDC733">replaygate</text>
+  <g clip-path="url(#clip-replaygate)">
+    <rect width="500" height="200" fill="url(#glow-replaygate)"/>
+    <g stroke="#CDC733" stroke-opacity="0.075" stroke-width="1.6" fill="none"
+       stroke-linecap="round" stroke-linejoin="round">
+      <path d="M316,44 V156" />
+      <path d="M420,44 V156" />
+      <path d="M316,66 H420" />
+      <path d="M316,90 H420" />
+      <path d="M316,114 H420" />
+      <path d="M340,132 l14,14 l30,-32" />
+    </g>
+    <rect x="14" y="22" width="3" height="156" rx="1.5" fill="url(#spine-replaygate)"/>
+    <rect x="1" y="1" width="498" height="1" fill="url(#edge-replaygate)"/>
+  </g>
 
-  <text x="26" y="74" font-family="system-ui,-apple-system,'Segoe UI',Roboto,Helvetica,Arial,sans-serif" font-size="13" fill="#F9F9F9"
-        opacity="0.86">A pre-deploy regression gate for LLM agents.</text>
-  <text x="26" y="93" font-family="system-ui,-apple-system,'Segoe UI',Roboto,Helvetica,Arial,sans-serif" font-size="13" fill="#F9F9F9"
-        opacity="0.86">Seal every I/O boundary, then fail the build.</text>
+  <text x="34" y="62" font-family="system-ui,-apple-system,'Segoe UI',Roboto,Helvetica,Arial,sans-serif" font-size="25" font-weight="700"
+        fill="#CDC733" letter-spacing="-0.4">replaygate</text>
 
-  <circle cx="26" cy="116" r="4.5" fill="#CDC733"/><text x="37" y="120" font-family="system-ui,-apple-system,'Segoe UI',Roboto,Helvetica,Arial,sans-serif" font-size="12" fill="#F9F9F9" opacity="0.72">Python</text><circle cx="87" cy="116" r="4.5" fill="#8ec7a8"/><text x="98" y="120" font-family="system-ui,-apple-system,'Segoe UI',Roboto,Helvetica,Arial,sans-serif" font-size="12" fill="#F9F9F9" opacity="0.72">LLM testing</text>
+  <text x="34" y="98" font-family="system-ui,-apple-system,'Segoe UI',Roboto,Helvetica,Arial,sans-serif" font-size="14" fill="#F9F9F9"
+        opacity="0.87">A pre-deploy regression gate for LLM agents.</text>
+  <text x="34" y="120" font-family="system-ui,-apple-system,'Segoe UI',Roboto,Helvetica,Arial,sans-serif" font-size="14" fill="#F9F9F9"
+        opacity="0.87">Seal every I/O boundary, then fail the build.</text>
+
+  <circle cx="34" cy="160" r="4.5" fill="#CDC733"/><text x="46" y="164.5" font-family="system-ui,-apple-system,'Segoe UI',Roboto,Helvetica,Arial,sans-serif" font-size="12.5" fill="#F9F9F9" opacity="0.7">Python</text><circle cx="102" cy="160" r="4.5" fill="#8ec7a8"/><text x="114" y="164.5" font-family="system-ui,-apple-system,'Segoe UI',Roboto,Helvetica,Arial,sans-serif" font-size="12.5" fill="#F9F9F9" opacity="0.7">LLM testing</text>
+
+  <text x="474" y="164.5" text-anchor="end" font-family="ui-monospace,SFMono-Regular,'SF Mono',Menlo,Consolas,monospace" font-size="10.5"
+        fill="#F9F9F9" opacity="0.3">github.com/Dowgg18/agent-replay-gate</text>
 </svg>
