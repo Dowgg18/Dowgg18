@@ -1,113 +1,115 @@
+<!--
+================================================================================
+README DE PERFIL — Douglas Domingos (@Dowgg18)
+
+COMO USAR
+1. Crie um repositório PÚBLICO chamado exatamente "Dowgg18" (mesmo nome do user).
+2. Marque "Add a README file" e cole todo este conteúdo dentro do README.md.
+3. Crie a pasta "assets" no repositório e suba a imagem do camaleão como
+   "assets/banner.png" (é o que aparece no topo).
+4. Preencha os links de contato no final (LinkedIn, Instagram, WhatsApp, e-mail).
+5. Para a animação da cobrinha, crie o arquivo ".github/workflows/snake.yml"
+   com o conteúdo que está no comentário no final deste arquivo.
+
+PALETA
+Preto chumbo #21211D · Verde musgo profundo #28332D
+Branco gelo  #F9F9F9 · Verde mostarda      #CDC733
+================================================================================
+-->
+
 <div align="center">
 
-<img src="https://capsule-render.vercel.app/api?type=waving&color=0:0f172a,50:6d28d9,100:a855f7&height=200&section=header&text=Douglas%20Domingos&fontSize=48&fontColor=ffffff&animation=twinkling&fontAlignY=36&desc=Solo%20founder%20%C2%B7%20Full-stack%20%C2%B7%20IA%20aplicada%20a%20vendas&descAlignY=56&descSize=16" width="100%" />
+<img src="assets/banner.png" alt="Domingos" width="100%" />
+
+<img src="https://capsule-render.vercel.app/api?type=rect&color=CDC733&height=3&section=header" width="100%" />
+
+<br/>
+
+[![](https://readme-typing-svg.demolab.com?font=Poppins&weight=600&size=21&duration=3200&pause=900&color=CDC733&center=true&vCenter=true&width=680&lines=Solo+founder+na+Domingos;Kamo+-+IA+que+atende+e+vende+no+WhatsApp;FastAPI+%7C+Next.js+15+%7C+Supabase+%7C+Docker+Swarm;Build+in+public+desde+2024)](https://github.com/Dowgg18)
 
 </div>
 
-<div align="center">
+<br/>
 
-[![Typing SVG](https://readme-typing-svg.demolab.com?font=Fira+Code&weight=600&size=22&duration=3000&pause=800&color=A855F7&center=true&vCenter=true&width=650&lines=Solo+founder+na+Domingos;Construindo+a+Kamo+-+IA+que+vende+no+WhatsApp;FastAPI+%2B+Next.js+15+%2B+Supabase+%2B+Docker+Swarm;Build+in+public+desde+2024+%F0%9F%9A%80)](https://github.com/Dowgg18)
+## Douglas Domingos
 
-</div>
+Solo founder na **Domingos**, onde construo software, automação e IA aplicada para negócios B2B — de concessionárias a marcas de nutrição e varejo.
 
----
+Meu produto principal é a **Kamo**: uma plataforma SaaS multi-tenant com agente de IA que atende, qualifica e vende por WhatsApp. Está em produção, com clientes reais pagando mensalidade.
 
-## 🧠 Sobre mim
+Escrevo direto no SDK em vez de depender de frameworks de abstração, e publico o processo real — números, decisões e erros — em build in public.
 
-```python
-class Douglas:
-    def __init__(self):
-        self.role      = "Solo Founder & Full-Stack Dev"
-        self.company   = "Domingos"
-        self.location  = "Espírito Santo, Brasil 🇧🇷"
-        self.product   = "Kamo"
-        self.focus     = ["Agentes de IA", "SaaS multi-tenant", "Sistemas distribuídos"]
-        self.mindset   = "Executar > planejar. Aprendo construindo."
+<br/>
 
-    def hoje(self):
-        return "Colocando IA para conversar, qualificar e vender no WhatsApp."
-```
+## Repositórios públicos
 
-- 🤖 Construo a **Kamo**, plataforma de IA que atende, qualifica e vende por WhatsApp para concessionárias
-- 🎯 Toco a **Domingos**, onde entrego software e automação para empresas
-- 🧩 Prefiro construir direto no SDK a depender de framework de abstração
-- 📢 Compartilho o processo real — números, erros e acertos — em **build in public**
-
----
-
-## 🔧 O que eu abro aqui
-
-> Cada repositório público abaixo é um problema real que apareceu rodando IA em produção,
-> isolado do produto e resolvido do jeito que eu queria ter encontrado pronto.
+Cada repositório abaixo é um problema real que apareceu rodando IA em produção, isolado do produto e resolvido do jeito que eu queria ter encontrado pronto.
 
 <div align="center">
 
 <a href="https://github.com/Dowgg18/debounced-webhook-pipeline">
-  <img src="https://github-readme-stats.vercel.app/api/pin/?username=Dowgg18&repo=debounced-webhook-pipeline&hide_border=true&bg_color=0D1117&title_color=A855F7&icon_color=A855F7&text_color=C9D1D9&show_owner=false" />
+  <img src="https://github-readme-stats.vercel.app/api/pin/?username=Dowgg18&repo=debounced-webhook-pipeline&hide_border=true&bg_color=21211D&title_color=CDC733&icon_color=CDC733&text_color=F9F9F9&show_owner=false" />
 </a>
 <a href="https://github.com/Dowgg18/agent-replay-gate">
-  <img src="https://github-readme-stats.vercel.app/api/pin/?username=Dowgg18&repo=agent-replay-gate&hide_border=true&bg_color=0D1117&title_color=A855F7&icon_color=A855F7&text_color=C9D1D9&show_owner=false" />
+  <img src="https://github-readme-stats.vercel.app/api/pin/?username=Dowgg18&repo=agent-replay-gate&hide_border=true&bg_color=21211D&title_color=CDC733&icon_color=CDC733&text_color=F9F9F9&show_owner=false" />
 </a>
 <a href="https://github.com/Dowgg18/unhealthy-until-proven">
-  <img src="https://github-readme-stats.vercel.app/api/pin/?username=Dowgg18&repo=unhealthy-until-proven&hide_border=true&bg_color=0D1117&title_color=A855F7&icon_color=A855F7&text_color=C9D1D9&show_owner=false" />
+  <img src="https://github-readme-stats.vercel.app/api/pin/?username=Dowgg18&repo=unhealthy-until-proven&hide_border=true&bg_color=21211D&title_color=CDC733&icon_color=CDC733&text_color=F9F9F9&show_owner=false" />
 </a>
 
 </div>
 
----
+<br/>
 
-## 🛠️ Stack
+## Stack
 
 <div align="center">
 
-### Backend
-![Python](https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white)
-![FastAPI](https://img.shields.io/badge/FastAPI-009688?style=for-the-badge&logo=fastapi&logoColor=white)
-![Redis](https://img.shields.io/badge/Redis-DC382D?style=for-the-badge&logo=redis&logoColor=white)
-![PostgreSQL](https://img.shields.io/badge/PostgreSQL-4169E1?style=for-the-badge&logo=postgresql&logoColor=white)
+<b>Backend</b>
 
-### Frontend
-![TypeScript](https://img.shields.io/badge/TypeScript-3178C6?style=for-the-badge&logo=typescript&logoColor=white)
-![Next.js](https://img.shields.io/badge/Next.js%2015-000000?style=for-the-badge&logo=nextdotjs&logoColor=white)
-![React](https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB)
-![Tailwind](https://img.shields.io/badge/Tailwind-06B6D4?style=for-the-badge&logo=tailwindcss&logoColor=white)
+![Python](https://img.shields.io/badge/Python-21211D?style=for-the-badge&logo=python&logoColor=CDC733)
+![FastAPI](https://img.shields.io/badge/FastAPI-21211D?style=for-the-badge&logo=fastapi&logoColor=CDC733)
+![Redis](https://img.shields.io/badge/Redis-21211D?style=for-the-badge&logo=redis&logoColor=CDC733)
+![PostgreSQL](https://img.shields.io/badge/PostgreSQL-21211D?style=for-the-badge&logo=postgresql&logoColor=CDC733)
 
-### Infra & Dados
-![Docker](https://img.shields.io/badge/Docker%20Swarm-2496ED?style=for-the-badge&logo=docker&logoColor=white)
-![Traefik](https://img.shields.io/badge/Traefik-24A1C1?style=for-the-badge&logo=traefikproxy&logoColor=white)
-![Supabase](https://img.shields.io/badge/Supabase-3FCF8E?style=for-the-badge&logo=supabase&logoColor=white)
-![Linux](https://img.shields.io/badge/Linux-FCC624?style=for-the-badge&logo=linux&logoColor=black)
+<b>Frontend</b>
+
+![TypeScript](https://img.shields.io/badge/TypeScript-21211D?style=for-the-badge&logo=typescript&logoColor=CDC733)
+![Next.js](https://img.shields.io/badge/Next.js%2015-21211D?style=for-the-badge&logo=nextdotjs&logoColor=CDC733)
+![React](https://img.shields.io/badge/React-21211D?style=for-the-badge&logo=react&logoColor=CDC733)
+![Tailwind](https://img.shields.io/badge/Tailwind-21211D?style=for-the-badge&logo=tailwindcss&logoColor=CDC733)
+
+<b>Infraestrutura</b>
+
+![Docker](https://img.shields.io/badge/Docker%20Swarm-21211D?style=for-the-badge&logo=docker&logoColor=CDC733)
+![Traefik](https://img.shields.io/badge/Traefik-21211D?style=for-the-badge&logo=traefikproxy&logoColor=CDC733)
+![Supabase](https://img.shields.io/badge/Supabase-21211D?style=for-the-badge&logo=supabase&logoColor=CDC733)
+![Linux](https://img.shields.io/badge/Linux-21211D?style=for-the-badge&logo=linux&logoColor=CDC733)
 
 </div>
 
----
+<br/>
 
-## 📊 Estatísticas
+## Estatísticas
 
 <div align="center">
 
-<img height="180em" src="https://github-readme-stats.vercel.app/api?username=Dowgg18&show_icons=true&include_all_commits=true&count_private=true&hide_border=true&bg_color=0D1117&title_color=A855F7&icon_color=A855F7&text_color=C9D1D9&locale=pt-br" />
-<img height="180em" src="https://github-readme-stats.vercel.app/api/top-langs/?username=Dowgg18&layout=compact&langs_count=8&hide_border=true&bg_color=0D1117&title_color=A855F7&text_color=C9D1D9&locale=pt-br" />
+<img height="180em" src="https://github-readme-stats.vercel.app/api?username=Dowgg18&show_icons=true&include_all_commits=true&count_private=true&hide_border=true&bg_color=21211D&title_color=CDC733&icon_color=CDC733&text_color=F9F9F9&locale=pt-br" />
+<img height="180em" src="https://github-readme-stats.vercel.app/api/top-langs/?username=Dowgg18&layout=compact&langs_count=8&hide_border=true&bg_color=21211D&title_color=CDC733&text_color=F9F9F9&locale=pt-br" />
 
 <br/><br/>
 
-<img src="https://streak-stats.demolab.com?user=Dowgg18&hide_border=true&background=0D1117&border=30363D&stroke=30363D&ring=A855F7&fire=A855F7&currStreakLabel=A855F7&sideNums=C9D1D9&sideLabels=C9D1D9&dates=8B949E&currStreakNum=C9D1D9&locale=pt_BR" width="60%" />
+<img src="https://streak-stats.demolab.com?user=Dowgg18&hide_border=true&background=21211D&ring=CDC733&fire=CDC733&currStreakLabel=CDC733&sideNums=F9F9F9&sideLabels=F9F9F9&currStreakNum=F9F9F9&dates=8A8A7A&locale=pt_BR" width="58%" />
+
+<br/><br/>
+
+<img src="https://github-readme-activity-graph.vercel.app/graph?username=Dowgg18&bg_color=21211D&color=F9F9F9&title_color=CDC733&line=CDC733&point=F9F9F9&area=true&area_color=CDC733&hide_border=true&custom_title=Contribui%C3%A7%C3%B5es%20do%20%C3%BAltimo%20ano" width="100%" />
 
 </div>
 
----
+<br/>
 
-## 📈 Atividade
-
-<div align="center">
-
-<img src="https://github-readme-activity-graph.vercel.app/graph?username=Dowgg18&bg_color=0D1117&color=C9D1D9&line=A855F7&point=FFFFFF&area=true&area_color=A855F7&hide_border=true&custom_title=Contribui%C3%A7%C3%B5es%20do%20%C3%BAltimo%20ano" width="100%" />
-
-</div>
-
----
-
-## 🐍 A cobrinha comendo os commits
+## Contribuições
 
 <div align="center">
 
@@ -119,46 +121,89 @@ class Douglas:
 
 </div>
 
-> ⚠️ A cobrinha só aparece depois que você adicionar o arquivo `.github/workflows/snake.yml` e rodar a Action uma vez.
+<br/>
 
----
-
-## 🚀 O que estou construindo
+## O que estou construindo
 
 <div align="center">
 <table>
   <tr>
     <td width="50%" valign="top">
-      <h3>🚗 Kamo</h3>
-      <p>SaaS multi-tenant com agente de IA que atende, qualifica e vende por WhatsApp para concessionárias. FastAPI + Next.js + Supabase + Evolution API, rodando em Docker Swarm. Cobrança recorrente e régua de inadimplência integradas.</p>
+      <h3>Kamo</h3>
+      <p align="left">SaaS multi-tenant com agente de IA que atende, qualifica e vende por WhatsApp para concessionárias. FastAPI, Next.js, Supabase e Evolution API rodando em Docker Swarm, com cobrança recorrente e régua de inadimplência integradas.</p>
     </td>
     <td width="50%" valign="top">
-      <h3>🎯 Domingos</h3>
-      <p>Minha empresa. Software sob medida, automação e IA aplicada para negócios B2B — de concessionárias a marcas de nutrição e varejo.</p>
+      <h3>Domingos</h3>
+      <p align="left">Minha empresa. Software sob medida, automação e IA aplicada para negócios B2B, com foco em resolver gargalo de atendimento, vendas e operação.</p>
     </td>
   </tr>
 </table>
 </div>
 
----
+<br/>
 
-## 🤝 Vamos conversar
-
-<div align="center">
-
-[![LinkedIn](https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://linkedin.com/in/SEU-LINKEDIN)
-[![Instagram](https://img.shields.io/badge/Instagram-E4405F?style=for-the-badge&logo=instagram&logoColor=white)](https://instagram.com/SEU-INSTAGRAM)
-[![WhatsApp](https://img.shields.io/badge/WhatsApp-25D366?style=for-the-badge&logo=whatsapp&logoColor=white)](https://wa.me/55SEUNUMERO)
-[![Email](https://img.shields.io/badge/Email-EA4335?style=for-the-badge&logo=gmail&logoColor=white)](mailto:SEU@EMAIL.COM)
-
-</div>
+## Contato
 
 <div align="center">
 
-<img src="https://komarev.com/ghpvc/?username=Dowgg18&label=Visitantes+no+perfil&color=a855f7&style=for-the-badge" />
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-21211D?style=for-the-badge&logo=linkedin&logoColor=CDC733)](https://linkedin.com/in/SEU-LINKEDIN)
+[![Instagram](https://img.shields.io/badge/Instagram-21211D?style=for-the-badge&logo=instagram&logoColor=CDC733)](https://instagram.com/SEU-INSTAGRAM)
+[![WhatsApp](https://img.shields.io/badge/WhatsApp-21211D?style=for-the-badge&logo=whatsapp&logoColor=CDC733)](https://wa.me/55SEUNUMERO)
+[![E-mail](https://img.shields.io/badge/E--mail-21211D?style=for-the-badge&logo=maildotru&logoColor=CDC733)](mailto:SEU@EMAIL.COM)
+
+<br/>
+
+<img src="https://komarev.com/ghpvc/?username=Dowgg18&label=Visitantes&color=21211D&style=for-the-badge" />
 
 <br/><br/>
 
-<img src="https://capsule-render.vercel.app/api?type=waving&color=0:a855f7,50:6d28d9,100:0f172a&height=120&section=footer" width="100%" />
+<img src="https://capsule-render.vercel.app/api?type=rect&color=CDC733&height=3&section=footer" width="100%" />
 
 </div>
+
+<!--
+================================================================================
+ANIMAÇÃO DA COBRINHA — arquivo separado no repositório
+
+Crie o arquivo ".github/workflows/snake.yml" e cole exatamente o conteúdo
+abaixo (sem estas linhas de comentário). Depois vá na aba "Actions" do
+repositório, selecione "Gerar animação da cobrinha" e clique em "Run workflow"
+uma vez. A partir daí ela se atualiza sozinha a cada 12 horas.
+--------------------------------------------------------------------------------
+
+name: Gerar animação da cobrinha
+
+on:
+  schedule:
+    - cron: "0 */12 * * *"
+  workflow_dispatch:
+  push:
+    branches:
+      - main
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    permissions:
+      contents: write
+
+    steps:
+      - name: Gerar os SVGs
+        uses: Platane/snk@v3
+        id: snake-gif
+        with:
+          github_user_name: Dowgg18
+          outputs: |
+            dist/snake.svg?palette=github-light
+            dist/snake-dark.svg?color_snake=#CDC733
+      - name: Publicar na branch "output"
+        uses: crazy-max/ghaction-github-pages@v4
+        with:
+          target_branch: output
+          build_dir: dist
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+================================================================================
+-->
