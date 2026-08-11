@@ -25,13 +25,13 @@ the way I wish I had found them. None of them are demos.
 <div align="center">
 
 <a href="https://github.com/Dowgg18/debounced-webhook-pipeline">
-  <img src="https://github-readme-stats.vercel.app/api/pin/?username=Dowgg18&repo=debounced-webhook-pipeline&hide_border=true&bg_color=21211D&title_color=CDC733&icon_color=CDC733&text_color=F9F9F9&show_owner=false" />
+  <img src="assets/burstq.svg" alt="burstq — one ordered unit of work per conversation" width="420" />
 </a>
 <a href="https://github.com/Dowgg18/agent-replay-gate">
-  <img src="https://github-readme-stats.vercel.app/api/pin/?username=Dowgg18&repo=agent-replay-gate&hide_border=true&bg_color=21211D&title_color=CDC733&icon_color=CDC733&text_color=F9F9F9&show_owner=false" />
+  <img src="assets/replaygate.svg" alt="replaygate — a pre-deploy regression gate for LLM agents" width="420" />
 </a>
 <a href="https://github.com/Dowgg18/unhealthy-until-proven">
-  <img src="https://github-readme-stats.vercel.app/api/pin/?username=Dowgg18&repo=unhealthy-until-proven&hide_border=true&bg_color=21211D&title_color=CDC733&icon_color=CDC733&text_color=F9F9F9&show_owner=false" />
+  <img src="assets/proven.svg" alt="proven — a health check has three outcomes, not two" width="420" />
 </a>
 
 </div>
