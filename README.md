@@ -80,6 +80,6 @@ Python · FastAPI · Redis · PostgreSQL · TypeScript · Next.js · Docker Swar
 ## Contact
 
 - **Email** — [douglascunhadomingos@gmail.com](mailto:douglascunhadomingos@gmail.com)
-- **LinkedIn** — <!-- paste your profile URL here -->
+- **LinkedIn** — [douglas-c-domingos](https://www.linkedin.com/in/douglas-c-domingos/)
 
 <sub>Open to backend and platform work, remote.</sub>
