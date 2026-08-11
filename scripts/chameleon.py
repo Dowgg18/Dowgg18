@@ -30,8 +30,8 @@ PITCH = CELL + GAP
 ROWS = 7
 PAD_X = 18
 PAD_Y = 26
-DURATION = 22.0  # seconds for one full crossing
-EAT_FADE = 0.55  # how long a square takes to dim after being eaten
+DURATION = 48.0  # seconds for one full crossing — a chameleon is not in a hurry
+EAT_FADE = 0.35  # how long a square takes to dim after being eaten
 
 # ── Palette (Kamo) ────────────────────────────────────────────────────────────
 INK = "#21211D"
@@ -120,12 +120,18 @@ def level(count: int, ceiling: int) -> int:
 
 
 def walk(columns: int) -> list[tuple[int, int]]:
-    """Boustrophedon: down one column, up the next. Every square is visited, and
-    the chameleon never teleports — which a naive left-to-right sweep does."""
+    """Boustrophedon by ROW: left to right along one row, right to left along the
+    next. Every square is visited and the walk never teleports.
+
+    Row-major rather than column-major for one reason that only shows up once you
+    look at it: the sprite is drawn in profile, so it has to travel horizontally.
+    Walking it down a column made a side-view animal slide vertically like a lift,
+    and flipping it to face the other way turned it upside down.
+    """
     path: list[tuple[int, int]] = []
-    for col in range(columns):
-        rows = range(ROWS) if col % 2 == 0 else range(ROWS - 1, -1, -1)
-        path.extend((col, row) for row in rows)
+    for row in range(ROWS):
+        cols = range(columns) if row % 2 == 0 else range(columns - 1, -1, -1)
+        path.extend((col, row) for col in cols)
     return path
 
 
@@ -184,33 +190,53 @@ def build(cells: list[Cell], dark: bool) -> str:
         lvl = level(cell.count, ceiling) if cell else 0
         tint_frames.append(f"{at:.4f}%{{fill:{levels[max(lvl, 1)]}}}")
 
-        # Face the direction of travel: even columns descend, odd ones climb.
-        facing = 1 if col % 2 == 0 else -1
-        flip_frames.append(f"{at:.4f}%{{transform:scaleY({facing})}}")
+        # Face the direction of travel. scaleX, never scaleY: mirroring a profile
+        # sprite vertically walks it on its back.
+        facing = 1 if row % 2 == 0 else -1
+        flip_frames.append(f"{at:.4f}%{{transform:scaleX({facing})}}")
 
-    move_frames.append(f"100%{{transform:translate({PAD_X + (columns - 1) * PITCH + CELL / 2:.1f}px,"
-                       f"{PAD_Y + CELL / 2:.1f}px)}}")
+    last_col = columns - 1 if (ROWS - 1) % 2 == 0 else 0
+    move_frames.append(
+        f"100%{{transform:translate({PAD_X + last_col * PITCH + CELL / 2:.1f}px,"
+        f"{PAD_Y + (ROWS - 1) * PITCH + CELL / 2:.1f}px)}}"
+    )
 
+    # Drawn facing right with the MOUTH at the local origin, so the outer
+    # translate puts the mouth exactly on the square being eaten and the body
+    # trails behind it. Everything else is measured back from there.
     chameleon = f"""
   <g class="cham">
     <g class="cham-flip">
-      <!-- curled tail -->
-      <path class="tail" d="M6.5,1.5 c-4.2,0 -5.6,3.4 -3.6,5.2 c1.7,1.5 4.1,0.3 3.6,-1.7 c-0.3,-1.2 -1.9,-1.3 -2.3,-0.2"
-            fill="none" stroke-width="1.8" stroke-linecap="round"/>
+      <!-- curled tail, springing from the hip -->
+      <path class="tail" d="M-18.2,1.4 c-3.8,0.6 -5.8,3 -5,5.2 c0.7,1.9 3.2,2.4 4.5,0.9
+                            c1.1,-1.3 0.3,-3.1 -1.2,-3 c-1,0.1 -1.5,0.9 -1.3,1.7"
+            fill="none" stroke-width="1.7" stroke-linecap="round"/>
+      <!-- hind leg, drawn before the body so it reads as the far side -->
+      <path class="leg far" d="M-13.4,4.2 c-0.6,1.9 -0.6,3 0.2,3.9 M-13.2,8.1 l-1.8,0.8
+                               M-13.2,8.1 l1.5,1"
+            fill="none" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/>
+      <!-- dorsal crest -->
+      <path class="body" d="M-4.4,-5.2 L-5.6,-8.1 L-7.2,-5.9 L-8.8,-8.5 L-10.4,-6.2
+                            L-12,-8.1 L-13.4,-5.4 C-10.4,-6.4 -7.2,-6.2 -4.4,-5.2 Z"/>
       <!-- body -->
-      <path class="body" d="M6,2 c5.2,-2.6 11.6,-1.2 13.4,3.1 c1.5,3.6 -1.4,6.6 -5.6,6.6 c-4.6,0 -8.6,-2.4 -9.6,-5.4 c-0.6,-1.9 0.1,-3.4 1.8,-4.3 z"/>
-      <!-- crest -->
-      <path class="body" d="M15.6,0.6 c2.6,0.2 4.2,1.6 4.6,3.4 c-1.6,-1.2 -3.2,-1.7 -4.9,-1.6 z"/>
-      <!-- legs -->
-      <path class="leg" d="M9,10.6 l0.6,3.4 M9.6,14 l-1.5,1.1 M9.6,14 l1.6,0.9" fill="none"
-            stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-      <path class="leg" d="M15.4,11 l0.4,3.2 M15.8,14.2 l-1.4,1.1 M15.8,14.2 l1.6,0.9" fill="none"
-            stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-      <!-- eye -->
-      <circle class="eye-white" cx="17.4" cy="5.4" r="2.5"/>
-      <circle class="eye" cx="18.3" cy="5.4" r="1.1"/>
+      <path class="body" d="M0,0 C-1.4,-2.6 -2.2,-4.2 -4.6,-5.2 C-8,-6.6 -12.4,-6.2 -15.4,-4.2
+                            C-17.4,-2.9 -18.3,-1.3 -18.4,0.5 C-18.5,2.4 -17,3.8 -14.4,4.5
+                            C-10,5.7 -4.8,5.2 -1.6,2.9 C-0.5,2.1 0.2,1 0,0 Z"/>
+      <!-- fore leg -->
+      <path class="leg" d="M-5.2,4.4 c0.6,1.9 0.5,3 -0.3,3.9 M-5.5,8.3 l-1.9,0.8
+                           M-5.5,8.3 l1.5,1.1"
+            fill="none" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/>
+      <!-- turret eye: a cone of skin with a very small pupil -->
+      <circle class="body" cx="-4.2" cy="-2" r="3"/>
+      <circle class="eye-white" cx="-3.9" cy="-2" r="1.5"/>
+      <circle class="eye" cx="-3.5" cy="-2" r="0.85"/>
+      <!-- jaw -->
+      <path class="jaw" d="M0,0 c-1.5,0.9 -2.9,1.5 -4.4,1.7" fill="none" stroke-width="0.8"/>
       <!-- tongue -->
-      <path class="tongue" d="M20.6,7.4 h9" fill="none" stroke-width="1.4" stroke-linecap="round"/>
+      <g class="tongue">
+        <path d="M0.5,0.7 h7" fill="none" stroke-width="1.3" stroke-linecap="round"/>
+        <circle cx="8.1" cy="0.7" r="1.3" stroke="none"/>
+      </g>
     </g>
   </g>"""
 
@@ -224,19 +250,26 @@ def build(cells: list[Cell], dark: bool) -> str:
   <style>
     .sq {{ shape-rendering: crispEdges }}
     .cham {{ animation: cham-walk {DURATION}s linear infinite }}
-    .cham-flip {{ animation: cham-face {DURATION}s steps(1) infinite; transform-origin: 12px 8px }}
+    /* steps(1) so the turn is a flick, not a squash through zero width.
+       Origin at the mouth, which is the local origin, so the head stays on the
+       square it is eating while the body swings round behind it. */
+    .cham-flip {{ animation: cham-face {DURATION}s steps(1) infinite;
+                  transform-origin: 0px 0px }}
     .body, .tail, .leg {{ animation: cham-tint {DURATION}s linear infinite }}
-    .tail, .leg {{ fill: none }}
     .body {{ stroke: none }}
-    .tail, .leg {{ stroke: currentColor }}
+    .tail, .leg {{ stroke: currentColor; fill: none }}
+    .leg.far {{ opacity: 0.55 }}
     .eye-white {{ fill: {ICE} }}
     .eye {{ fill: {INK} }}
-    .tongue {{ stroke: #e0607e; opacity: 0; animation: tongue {DURATION / 26:.3f}s ease-in-out infinite }}
+    .jaw {{ stroke: {INK}; opacity: 0.35 }}
+    .tongue {{ fill: #e0607e; stroke: #e0607e; opacity: 0;
+               transform-origin: 0px 0px;
+               animation: tongue {DURATION / 46:.3f}s ease-in-out infinite }}
     g.cham {{ color: {ACCENT} }}
     @keyframes tongue {{
-      0%, 78% {{ opacity: 0; transform: scaleX(0.2) }}
-      86% {{ opacity: 1; transform: scaleX(1) }}
-      100% {{ opacity: 0; transform: scaleX(0.2) }}
+      0%, 74% {{ opacity: 0; transform: scaleX(0.15) }}
+      84% {{ opacity: 0.95; transform: scaleX(1) }}
+      94%, 100% {{ opacity: 0; transform: scaleX(0.15) }}
     }}
     @keyframes cham-walk {{ {"".join(move_frames)} }}
     @keyframes cham-tint {{ {"".join(tint_frames)} }}
