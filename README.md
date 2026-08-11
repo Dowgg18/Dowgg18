@@ -90,6 +90,16 @@ repositories above exist because of that.
 
 <div align="center">
 
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/Dowgg18/Dowgg18/output/chameleon-dark.svg" />
+  <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/Dowgg18/Dowgg18/output/chameleon.svg" />
+  <img alt="A chameleon walking across the contribution graph, taking the colour of each square it eats" src="https://raw.githubusercontent.com/Dowgg18/Dowgg18/output/chameleon-dark.svg" width="100%" />
+</picture>
+
+<sub>It takes the colour of whatever it just ate — <a href="scripts/chameleon.py">scripts/chameleon.py</a>, no dependencies.</sub>
+
+<br/><br/>
+
 <img src="https://capsule-render.vercel.app/api?type=rect&color=0:21211D,55:28332D,100:CDC733&height=4&section=footer" width="100%" />
 
 </div>
