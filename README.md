@@ -1,64 +1,81 @@
-# Douglas Domingos
+<div align="center">
 
-I build backend systems that have to keep working when something fails.
+<img src="https://capsule-render.vercel.app/api?type=waving&color=0:21211D,55:28332D,100:CDC733&height=200&section=header&text=Douglas%20Domingos&fontSize=48&fontColor=F9F9F9&fontAlignY=38&desc=Backend%20engineer%20%C2%B7%20systems%20that%20keep%20working%20when%20something%20fails&descAlignY=58&descSize=15" width="100%" />
 
-Right now that means a multi-tenant SaaS running in production — FastAPI, Redis,
-Postgres and Next.js on Docker Swarm — with paying customers and nobody else on
-call. The repositories below are problems that system surfaced, pulled out and
-solved the way I wish I had found them.
+<a href="https://www.linkedin.com/in/douglas-c-domingos/">
+  <img src="https://img.shields.io/badge/LinkedIn-21211D?style=for-the-badge&logo=linkedin&logoColor=CDC733" alt="LinkedIn" />
+</a>
+<a href="mailto:douglascunhadomingos@gmail.com">
+  <img src="https://img.shields.io/badge/Email-21211D?style=for-the-badge&logo=gmail&logoColor=CDC733" alt="Email" />
+</a>
+<img src="https://img.shields.io/badge/Open%20to%20remote%20work-28332D?style=for-the-badge&logoColor=F9F9F9" alt="Open to remote work" />
 
-None of them are demos.
+</div>
 
----
+<br/>
 
-## Open source
+I run a multi-tenant SaaS in production — FastAPI, Redis, Postgres and Next.js on
+Docker Swarm — with paying customers and nobody else on call.
 
-### [burstq](https://github.com/Dowgg18/debounced-webhook-pipeline) · one ordered unit of work per conversation
+The repositories below are problems that system surfaced, pulled out and solved
+the way I wish I had found them. None of them are demos.
 
-People type the way they talk, so one question arrives as four webhook deliveries
-in three seconds — and the provider redelivers half of them. This is the Redis
-Streams pipeline that collapses that into a single handler call, in order, and
-survives a crash in the middle of it.
+<br/>
 
-It is built around three failure modes that pass every test you would think to
-write: an idempotency key that silently eats your retries, a debounce window that
-dies with the process that opened it, and a per-conversation lock that stops
-locking the moment you run two replicas.
+<div align="center">
 
-`Python` · `Redis Streams` · `asyncio` · `at-least-once delivery`
+<a href="https://github.com/Dowgg18/debounced-webhook-pipeline">
+  <img src="https://github-readme-stats.vercel.app/api/pin/?username=Dowgg18&repo=debounced-webhook-pipeline&hide_border=true&bg_color=21211D&title_color=CDC733&icon_color=CDC733&text_color=F9F9F9&show_owner=false" />
+</a>
+<a href="https://github.com/Dowgg18/agent-replay-gate">
+  <img src="https://github-readme-stats.vercel.app/api/pin/?username=Dowgg18&repo=agent-replay-gate&hide_border=true&bg_color=21211D&title_color=CDC733&icon_color=CDC733&text_color=F9F9F9&show_owner=false" />
+</a>
+<a href="https://github.com/Dowgg18/unhealthy-until-proven">
+  <img src="https://github-readme-stats.vercel.app/api/pin/?username=Dowgg18&repo=unhealthy-until-proven&hide_border=true&bg_color=21211D&title_color=CDC733&icon_color=CDC733&text_color=F9F9F9&show_owner=false" />
+</a>
 
-### [replaygate](https://github.com/Dowgg18/agent-replay-gate) · a pre-deploy gate for conversational agents
+</div>
 
-Substring assertions break on rewording. Live-model tests are non-deterministic
-and cost money. "It looked fine in the console" is not a gate.
+<br/>
 
-So: replay scripted conversations through the real code with every I/O boundary
-sealed under a policy — fake it, count it, or forbid it — and fail the build the
-moment a path that was supposed to be deterministic reaches for the model. One
-exit code, a published rubric, and a report that opens with what broke instead of
-with the average.
+### The problem behind each one
 
-`Python` · `LLM testing` · `CI` · `regression gates`
+**[burstq](https://github.com/Dowgg18/debounced-webhook-pipeline)** — people type
+the way they talk, so one question arrives as four webhook deliveries in three
+seconds, and the provider redelivers half of them. Built around three failure
+modes that pass every test you would think to write: an idempotency key that
+silently eats your retries, a debounce window that dies with the process that
+opened it, and a per-conversation lock that stops locking the moment you run two
+replicas.
 
-### [proven](https://github.com/Dowgg18/unhealthy-until-proven) · a health check has three outcomes, not two
+**[replaygate](https://github.com/Dowgg18/agent-replay-gate)** — substring
+assertions break on rewording, live-model tests cost money and never repeat, and
+"it looked fine in the console" is not a gate. So: replay conversations through
+the real code with every I/O boundary sealed under a policy — fake it, count it,
+or forbid it — and fail the build the moment a deterministic path reaches for the
+model.
 
-`measured`, `stale`, `unknown`. Almost every monitoring bug is the third one
-being quietly folded into one of the first two.
+**[proven](https://github.com/Dowgg18/unhealthy-until-proven)** — a health check
+has three outcomes, not two. A dashboard I owned reported a channel as
+**Connected** for two months after it had died, because the status column was
+only ever written on the happy path, so it climbed to green and could never come
+back down.
 
-A dashboard I owned reported a channel as **Connected** for two months after it
-had died. Four separate mechanisms, each defensible alone, stacked into one lie —
-including a status column that was only ever written on the happy path, so it
-climbed to green and could never come back down.
+<br/>
 
-The library makes the wrong thing unwritable: `Health` has no truth value,
-persistence refuses to record "I could not check", and collapsing to a boolean
-requires naming what unknown means, at the call site, every time.
+<div align="center">
 
-`Python` · `observability` · `SRE` · `fail-safe defaults`
+### Stack
 
----
+<img src="https://skillicons.dev/icons?i=python,fastapi,redis,postgres,ts,nextjs,react,tailwind&theme=dark" />
+<br/>
+<img src="https://skillicons.dev/icons?i=docker,linux,supabase,git,github,vscode&theme=dark" />
 
-## Currently
+</div>
+
+<br/>
+
+### Currently
 
 **Kamo** — a multi-tenant SaaS where an AI agent handles customer conversations
 end to end for vehicle dealerships: qualifying, collecting financing details, and
@@ -66,20 +83,13 @@ handing over to a salesperson at the right moment. Roughly 28k messages and 1.5k
 leads through it so far.
 
 I write against the model SDK directly rather than through an abstraction
-framework, and I keep the interesting failures rather than hiding them — the
-three repositories above exist because of that.
+framework, and I keep the interesting failures instead of hiding them — the three
+repositories above exist because of that.
 
----
+<br/>
 
-## Stack
+<div align="center">
 
-Python · FastAPI · Redis · PostgreSQL · TypeScript · Next.js · Docker Swarm · Traefik · Linux
+<img src="https://capsule-render.vercel.app/api?type=rect&color=0:21211D,55:28332D,100:CDC733&height=4&section=footer" width="100%" />
 
----
-
-## Contact
-
-- **Email** — [douglascunhadomingos@gmail.com](mailto:douglascunhadomingos@gmail.com)
-- **LinkedIn** — [douglas-c-domingos](https://www.linkedin.com/in/douglas-c-domingos/)
-
-<sub>Open to backend and platform work, remote.</sub>
+</div>
