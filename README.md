@@ -14,13 +14,50 @@
 
 <br/>
 
-I run a multi-tenant SaaS in production — FastAPI, Redis, Postgres and Next.js on
-Docker Swarm — with paying customers and nobody else on call.
-
-The repositories below are problems that system surfaced, pulled out and solved
-the way I wish I had found them. None of them are demos.
+I run a multi-tenant SaaS in production (FastAPI, Redis, Postgres and Next.js on
+Docker Swarm) with paying customers and nobody else on call. I also build for
+clients: a supplement brand's store that goes from checkout to tax invoice on its
+own, its creator program, and a trade chamber's portal in three languages.
 
 <br/>
+
+### Built for clients
+
+The code belongs to the clients, so these repositories are write-ups: screens,
+architecture and the decisions that hold each system up.
+
+<table>
+  <tr>
+    <td width="33%" valign="top">
+      <a href="https://github.com/Dowgg18/4life-nutrition-showcase">
+        <img src="https://raw.githubusercontent.com/Dowgg18/4life-nutrition-showcase/main/assets/01-home.jpg" alt="4Life Nutrition store on desktop and mobile" />
+      </a>
+      <br/><b><a href="https://github.com/Dowgg18/4life-nutrition-showcase">4Life Nutrition · store</a></b>
+      <br/><sub>Next.js + Medusa v2. Payment, Brazilian tax invoice, shipping label and WhatsApp alerts, with no one copying data between systems.</sub>
+    </td>
+    <td width="33%" valign="top">
+      <a href="https://github.com/Dowgg18/4life-creators-showcase">
+        <img src="https://raw.githubusercontent.com/Dowgg18/4life-creators-showcase/main/assets/10-creator-army.jpg" alt="Creator Army landing page on desktop and mobile" />
+      </a>
+      <br/><b><a href="https://github.com/Dowgg18/4life-creators-showcase">4Life · Creator Army</a></b>
+      <br/><sub>Influencer program: application queue, per-creator coupons and an idempotent commission sweep that corrects itself.</sub>
+    </td>
+    <td width="33%" valign="top">
+      <a href="https://github.com/Dowgg18/camara-brasil-russia-showcase">
+        <img src="https://raw.githubusercontent.com/Dowgg18/camara-brasil-russia-showcase/main/assets/02-russo.jpg" alt="Brazil-Russia Chamber portal in Russian" />
+      </a>
+      <br/><b><a href="https://github.com/Dowgg18/camara-brasil-russia-showcase">Brazil-Russia Chamber</a></b>
+      <br/><sub>PT/RU/EN portal on Supabase. Editors paste raw text and get a translated, SEO-ready article; the AI never rewrites the body.</sub>
+    </td>
+  </tr>
+</table>
+
+<br/>
+
+### Open source, pulled out of production
+
+The repositories below are problems my own system surfaced, pulled out and solved
+the way I wish I had found them. None of them are demos.
 
 <div align="center">
 
@@ -59,6 +96,12 @@ only ever written on the happy path, so it climbed to green and could never come
 back down. `measured` / `stale` / `unknown`, and collapsing to a boolean requires
 naming what unknown means, at the call site, every time.
 
+**[reachable](https://github.com/Dowgg18/covered-but-unreachable)** — coverage says
+the line ran. It does not say production can get there. A unit test that calls a
+function directly turns its branches green while the only door real traffic uses
+returns three frames earlier. `ORPHANED` is the verdict worth installing it for:
+code that runs, passes review, and serves nobody.
+
 <br/>
 
 <div align="center">
@@ -81,8 +124,8 @@ handing over to a salesperson at the right moment. Roughly 28k messages and 1.5k
 leads through it so far.
 
 I write against the model SDK directly rather than through an abstraction
-framework, and I keep the interesting failures instead of hiding them — the three
-repositories above exist because of that.
+framework, and I keep the interesting failures instead of hiding them — the four
+open-source repositories above exist because of that.
 
 <br/>
 
