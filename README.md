@@ -21,6 +21,22 @@ own, its creator program, and a trade chamber's portal in three languages.
 
 <br/>
 
+### Kamo, my product
+
+<a href="https://github.com/Dowgg18/kamo-showcase">
+  <img src="https://raw.githubusercontent.com/Dowgg18/kamo-showcase/main/assets/01-conversas.jpg" alt="Kamo conversations panel on desktop and mobile" width="100%" />
+</a>
+
+A multi-tenant SaaS where an AI agent answers a car dealership's WhatsApp end to
+end: it qualifies the buyer, collects the financing details one question at a
+time, and hands the conversation to a salesperson at the right moment, with the
+history ready. 30,772 messages and 1,602 customers through it between May and
+August 2026, almost a quarter of them while the store was closed.
+FastAPI, Redis Streams, Supabase Realtime and Next.js on Docker Swarm.
+**[Screens and architecture →](https://github.com/Dowgg18/kamo-showcase)**
+
+<br/>
+
 ### Built for clients
 
 The code belongs to the clients, so these repositories are write-ups: screens,
@@ -116,12 +132,7 @@ code that runs, passes review, and serves nobody.
 
 <br/>
 
-### Currently
-
-**Kamo** — a multi-tenant SaaS where an AI agent handles customer conversations
-end to end for vehicle dealerships: qualifying, collecting financing details, and
-handing over to a salesperson at the right moment. Roughly 28k messages and 1.5k
-leads through it so far.
+### How I work
 
 I write against the model SDK directly rather than through an abstraction
 framework, and I keep the interesting failures instead of hiding them — the four
