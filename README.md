@@ -53,7 +53,7 @@ architecture and the decisions that hold each system up.
     </td>
     <td width="33%" valign="top">
       <a href="https://github.com/Dowgg18/4life-creators-showcase">
-        <img src="https://raw.githubusercontent.com/Dowgg18/4life-creators-showcase/main/assets/10-creator-army.jpg" alt="Creator Army landing page on desktop and mobile" />
+        <img src="https://raw.githubusercontent.com/Dowgg18/4life-creators-showcase/main/assets/21-lp-desktop.jpg" alt="Creator Army landing page on desktop" />
       </a>
       <br/><b><a href="https://github.com/Dowgg18/4life-creators-showcase">4Life · Creator Army</a></b>
       <br/><sub>Influencer program: application queue, per-creator coupons and an idempotent commission sweep that corrects itself.</sub>
