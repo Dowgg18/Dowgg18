@@ -23,8 +23,8 @@ own, its creator program, and a trade chamber's portal in three languages.
 
 ### Kamo, my product
 
-<a href="https://github.com/Dowgg18/kamo-showcase">
-  <img src="https://raw.githubusercontent.com/Dowgg18/kamo-showcase/main/assets/01-conversas.jpg" alt="Kamo conversations panel on desktop and mobile" width="100%" />
+<a href="https://github.com/domingos-engineering/kamo-showcase">
+  <img src="https://raw.githubusercontent.com/domingos-engineering/kamo-showcase/main/assets/01-conversas.jpg" alt="Kamo conversations panel on desktop and mobile" width="100%" />
 </a>
 
 A multi-tenant SaaS where an AI agent answers a car dealership's WhatsApp end to
@@ -33,7 +33,7 @@ time, and hands the conversation to a salesperson at the right moment, with the
 history ready. 30,772 messages and 1,602 customers through it between May and
 August 2026, almost a quarter of them while the store was closed.
 FastAPI, Redis Streams, Supabase Realtime and Next.js on Docker Swarm.
-**[Screens and architecture →](https://github.com/Dowgg18/kamo-showcase)**
+**[Screens and architecture →](https://github.com/domingos-engineering/kamo-showcase)**
 
 <br/>
 
