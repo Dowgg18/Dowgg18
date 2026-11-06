@@ -45,17 +45,17 @@ architecture and the decisions that hold each system up.
 <table>
   <tr>
     <td width="33%" valign="top">
-      <a href="https://github.com/Dowgg18/4life-nutrition-showcase">
-        <img src="https://raw.githubusercontent.com/Dowgg18/4life-nutrition-showcase/main/assets/01-home.jpg" alt="4Life Nutrition store on desktop and mobile" />
+      <a href="https://github.com/domingos-engineering/4life-nutrition-showcase">
+        <img src="https://raw.githubusercontent.com/domingos-engineering/4life-nutrition-showcase/main/assets/01-home.jpg" alt="4Life Nutrition store on desktop and mobile" />
       </a>
-      <br/><b><a href="https://github.com/Dowgg18/4life-nutrition-showcase">4Life Nutrition · store</a></b>
+      <br/><b><a href="https://github.com/domingos-engineering/4life-nutrition-showcase">4Life Nutrition · store</a></b>
       <br/><sub>Next.js + Medusa v2. Payment, Brazilian tax invoice, shipping label and WhatsApp alerts, with no one copying data between systems.</sub>
     </td>
     <td width="33%" valign="top">
-      <a href="https://github.com/Dowgg18/4life-creators-showcase">
-        <img src="https://raw.githubusercontent.com/Dowgg18/4life-creators-showcase/main/assets/21-lp-desktop.jpg" alt="Creator Army landing page on desktop" />
+      <a href="https://github.com/domingos-engineering/4life-creators-showcase">
+        <img src="https://raw.githubusercontent.com/domingos-engineering/4life-creators-showcase/main/assets/21-lp-desktop.jpg" alt="Creator Army landing page on desktop" />
       </a>
-      <br/><b><a href="https://github.com/Dowgg18/4life-creators-showcase">4Life · Creator Army</a></b>
+      <br/><b><a href="https://github.com/domingos-engineering/4life-creators-showcase">4Life · Creator Army</a></b>
       <br/><sub>Influencer program: application queue, per-creator coupons and an idempotent commission sweep that corrects itself.</sub>
     </td>
     <td width="33%" valign="top">
